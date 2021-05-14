@@ -3,17 +3,15 @@ import React from 'react';
 function NotFound() {
     return (
 
-        <view
+        <div
             style={{
-                backgroundColor: 'red',
                 backgroundImage: `url('./../../assets/images/png/download.png')`,
-                // backgroundPosition: 'center',
-                // backgroundSize: 'cover',
-                // backgroundRepeat: 'no-repeat'
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
             }}>
-f
-            {/* <h1>sdfasdf</h1> */}
-        </view>
+            <h1>page note found</h1>
+        </div>
     )
 }
 

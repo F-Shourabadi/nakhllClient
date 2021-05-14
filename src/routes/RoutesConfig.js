@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import Login from '../common/module/login/Login';
 import NotFound from '../common/pages/NotFound';
+import HandleCustomComponent from '../www/front/module/checkCustom/HandleCustomComponent';
 import FpanelTest from '../www/frontPanel/module/FpanelTest';
 import FpanelTestNew from '../www/frontPanel/module/FpanelTestNew';
 import PageFrontPanel from '../www/frontPanel/PageFrontPanel';
@@ -13,10 +14,10 @@ export const RenderRoutes = ({ routes }) => {
         <Switch>
             {
                 routes.map((route, index) => {
-                    return <RoutWithSubRout key={index} {...route} />
+                    return <Routwithsubrout key={index} {...route} />
                 })
             }
-            <Route component={() => <NotFound/>} />
+            <Route component={() => <NotFound />} />
         </Switch>
     )
 }
@@ -46,6 +47,7 @@ const Routes = [
         routes: [
             { path: '/app', key: 'APP_ROOT', exact: true, component: (props) => <h3>app root</h3> },
             { path: '/app/page', key: 'APP_Page', exact: false, component: (props) => <h1>app page</h1> },
+            { path: '/app/table', key: 'APP_Page', exact: false, component: (props) => <HandleCustomComponent /> },
         ]
     },
     {

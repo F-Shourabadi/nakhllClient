@@ -30,8 +30,8 @@ class CustomDropDown extends React.Component {
         isMulti={true}
         placeholder={"enter or selected item..."}
         isSearchable={true}
-        onMenuClose={(close) =>{}}
-        onMenuOpen={(open)=>{}}
+        onMenuClose={(close) => { }}
+        onMenuOpen={(open) => { }}
         onInputChange={(searchInput) => { }}
       />
     );

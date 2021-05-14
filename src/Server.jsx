@@ -11,13 +11,12 @@ export default function serverRenderer({ clientStats, serverStats }) {
     return (req, res, next) => {
         const context = {};
         const markup = ReactDOMServer.renderToString(
-            
+
             <StaticRouter>
-                <Provider store={ Store }>
+                <Provider store={Store}>
                     <App />
                 </Provider>
-                </StaticRouter>
-            
+            </StaticRouter>
         );
         const helmet = Helmet.renderStatic();
 
