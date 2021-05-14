@@ -4,8 +4,9 @@ import CustomDropDown from '../../../../components/custom/customDropDown/CustomD
 
 const HandleCustomComponent = () => {
 
+    console.log("handle custom component")
 
-    render(
+    return (
         <div>
             <CustomDropDown />
         </div>
