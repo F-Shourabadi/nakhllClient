@@ -1,41 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+const apiData = {
+  type: 'COMBO|AutoComplete',
+  entity: "CITY",
+  input: 'search',
+  page: '1',
+  rows: '10',
+}
 
-class CustomDropDown extends React.Component {
-  state = {
-    selectedOption: null,
-  };
-  handleChange = selectedOption => {
-    this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
-  };
-  render() {
-    const { selectedOption } = this.state;
+const Entity = {
+  COUNTRY: 'country',
+  CITY: 'city',
+  GENDER: 'gender',
+  JOB: 'job',
+  HOJREH: 'hojreh',
+  RASTEH: 'rasteh'
+}
+const CustomDropDown = (props) => {
 
-    return (
-      <Select
-        {...this.props}
-        defaultValue={options[1]}
-        // defaultInputValue={ }
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-        isDisabled={false}
-        isMulti={true}
-        placeholder={"enter or selected item..."}
-        isSearchable={true}
-        onMenuClose={(close) => { }}
-        onMenuOpen={(open) => { }}
-        onInputChange={(searchInput) => { }}
-      />
-    );
-  }
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [options, setOptions] = useState(props.entity ? [{ value: 'chocolate2', label: 'Chocolate2' },] : props.options);
+
+  const handleChange = selectedOption => {
+    setSelectedOption(selectedOption);
+    props.onChange(selectedOption);
+  };
+
+  return (
+    <Select
+      {...props}
+      className={`dropDown ${props.className}`}
+      options={options}
+      value={selectedOption}
+      onChange={handleChange}
+    />
+  );
+
 }
 
 export default CustomDropDown;
