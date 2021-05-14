@@ -14,7 +14,7 @@ export const RenderRoutes = ({ routes }) => {
         <Switch>
             {
                 routes.map((route, index) => {
-                    return <Routwithsubrout key={index} {...route} />
+                    return <RoutWithSubRout key={index} {...route} />
                 })
             }
             <Route component={() => <NotFound />} />
