@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 
+
 const apiData = {
   type: 'COMBO|AutoComplete',
   entity: "CITY",
@@ -17,11 +18,20 @@ const Entity = {
   HOJREH: 'hojreh',
   RASTEH: 'rasteh'
 }
+
+
+
 const CustomDropDown = (props) => {
+
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [options, setOptions] = useState(props.entity ? [{ value: 'chocolate2', label: 'Chocolate2' },] : props.options);
 
+  /**
+   * 
+   * @param {function} selectedOption 
+   * @param {*onChange > callBack function} props
+   */
   const handleChange = selectedOption => {
     setSelectedOption(selectedOption);
     props.onChange(selectedOption);
@@ -36,7 +46,6 @@ const CustomDropDown = (props) => {
       onChange={handleChange}
     />
   );
-
 }
 
-export default CustomDropDown;
+export { CustomDropDown };

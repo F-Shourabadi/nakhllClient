@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
-import Login from '../common/module/login/Login';
 import NotFound from '../common/pages/NotFound';
 import HandleCustomComponent from '../www/front/module/checkCustom/HandleCustomComponent';
 import FpanelTest from '../www/frontPanel/module/FpanelTest';
 import FpanelTestNew from '../www/frontPanel/module/FpanelTestNew';
 import PageFrontPanel from '../www/frontPanel/PageFrontPanel';
+import Login from './../common/module/login/Login';
+import ProductPage from './../www/front/module/productPage/ProductPage';
 
 export const RenderRoutes = ({ routes }) => {
-
 
     return (
         <Switch>
@@ -47,7 +47,7 @@ const Routes = [
         routes: [
             { path: '/app', key: 'APP_ROOT', exact: true, component: (props) => <h3>app root</h3> },
             { path: '/app/page', key: 'APP_Page', exact: false, component: (props) => <h1>app page</h1> },
-            { path: '/app/table', key: 'APP_Page', exact: false, component: (props) => <HandleCustomComponent /> },
+            { path: '/app/productPage', key: 'APP_Page', exact: false, component: (props) => <ProductPage /> },
         ]
     },
     {

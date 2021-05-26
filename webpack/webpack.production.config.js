@@ -28,7 +28,12 @@ module.exports = [
                     exclude: /(node_modules[\\\/])/,
                     use: [
                         {
+                            test: /\.jsx?$/,
                             loader: 'babel-loader',
+                            exclude: /node_modules/,
+                            query: {
+                                presets: ['es2015']
+                            }
                         }
                     ]
                 },
@@ -101,7 +106,12 @@ module.exports = [
                     exclude: /(node_modules[\\\/])/,
                     use: [
                         {
+                            test: /\.jsx?$/,
                             loader: 'babel-loader',
+                            exclude: /node_modules/,
+                            query: {
+                                presets: ['es2015']
+                            }
                         }
                     ]
                 },

@@ -4,6 +4,7 @@ import Routes, { RenderRoutes } from '../routes/RoutesConfig';
 import { PageFront } from './front/PageFront';
 import { useDispatch } from 'react-redux';
 import { increment } from '../redux/counter/Actions';
+import { CustomHeaderComponent } from './../common/module';
 
 let Www = () => {
     let dispatch = useDispatch();
@@ -15,7 +16,10 @@ let Www = () => {
         //     <Route exact path='/' render={(props) => <PageFront {...props}/> }/>
         //     <Route exact path='/fp' render={(props) => <PageFront {...props}/> }/>
         // </Switch>
-        <RenderRoutes routes={ Routes }/>
+        <div>
+            <CustomHeaderComponent />
+            <RenderRoutes routes={Routes} />
+        </div>
     )
 }
 

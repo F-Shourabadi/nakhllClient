@@ -6,17 +6,26 @@ import { hideModal, showModal } from "../../redux/modal/Action";
 const { dispatch } = Store;
 //=================================================================\\
 export const instanceAxiosWithOutToken = Axios.create({
-    // baseURL: ConfigRegister.baseUrl,
-    baseURL: 'http://ergast.com/',
-    // timeout: 18000,
+    baseURL: ConfigRegister.baseUrl,
+    // baseURL: 'http://ergast.com/',
+    headers: {
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': 'true',
+        'Content-Type': ' application/json'
+    },
+    timeout: 18000,
 });
+
+// instanceAxiosWithOutToken.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+// instanceAxiosWithOutToken.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 //=================================================================\\
 export const instanceAxiosWithToken = Axios.create({
-    // baseURL: ConfigRegister.baseUrl,
-    baseURL: 'http://ergast.com/',
-    // timeout: 18000,
+    baseURL: ConfigRegister.baseUrl,
+    // baseURL: 'http://ergast.com/',
+    timeout: 18000,
     headers: {
+        'Access-Control-Allow-Origin': '*',
         'Authorization': 'Bearer sdfasfd-asfd-12-23'
     },
 });
