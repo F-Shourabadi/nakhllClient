@@ -1,7 +1,7 @@
 import React, { useEffect, lazy, useState, Fragment } from 'react';
 import ApiRegister from '../../../../services/apiRegister/ApiRegister';
 import styles from './../../../../styles/stylesProductPage.pcss';
-import BeautyStars from "beauty-stars";
+import BeautyStars from 'beauty-stars';
 import {
     CustomSliderProduct,
     CustomButton

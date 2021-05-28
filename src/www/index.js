@@ -5,6 +5,7 @@ import { PageFront } from './front/PageFront';
 import { useDispatch } from 'react-redux';
 import { increment } from '../redux/counter/Actions';
 import { CustomHeaderComponent } from './../common/module';
+// import './../../node_modules/bootstra'
 
 let Www = () => {
     let dispatch = useDispatch();
