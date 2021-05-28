@@ -2,11 +2,15 @@ import React, { useEffect, lazy, useState, Fragment } from 'react';
 import ApiRegister from '../../../../services/apiRegister/ApiRegister';
 import styles from './../../../../styles/stylesProductPage.pcss';
 import BeautyStars from 'beauty-stars';
+import img from './../../../../assets/images/png/download.png';
+import delivery_logo from './../../../../assets/images/png/delivery_logo.png';
+import guarantee_logo from './../../../../assets/images/png/guarantee_logo.png';
+import quality_logo from './../../../../assets/images/png/quality_logo.png';
+import shopping_logo from './../../../../assets/images/png/shopping_logo.png';
 import {
     CustomSliderProduct,
     CustomButton
 } from './../../../../components';
-// import shoppLogo from './../../../../assets/images/png/shoppinglogo.png';
 const ProductPage = (props) => {
 
     const [data, setData] = useState({
@@ -247,7 +251,7 @@ const ProductPage = (props) => {
                                             _handleProductAttribute()
                                         }
                                     </div>
-                                    <span style={{ height: '.01vw', width: '100%', backgroundColor: '#d9ebeb', marginTop: '12px'}}></span>
+                                    <span style={{ height: '.01vw', width: '100%', backgroundColor: '#d9ebeb', marginTop: '12px' }}></span>
                                 </div>
                                 <div style={{
                                     marginTop: 15, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end'
@@ -292,7 +296,7 @@ const ProductPage = (props) => {
                                                 activeColor={'#ffffff'}
                                             // onChange={value => this.setState({ value })}
                                             />
-                                            <span style={{color: 'white'}}> 4.3(33نفر) </span>
+                                            <span style={{ color: 'white' }}> 4.3(33نفر) </span>
                                         </div>
                                     </div>
                                     <span>فروشنده: فرامرز شورآبادی</span>
@@ -304,23 +308,23 @@ const ProductPage = (props) => {
 
                             </div>
                         </div>
-                        <span style={{ display: 'flex', flex: .001, backgroundColor: '#d9ebeb' }}></span>
+                        <span style={{ display: 'flex', flex: .001, backgroundColor: '#d9ebeb', marginRight: '1vw' }}></span>
                         <div className={styles.attribute_product_foot}>
                             <div className={styles.attribute_product_foot_item}>
                                 <span>پرداخت انلاین هزینه</span>
-                                <img src={'./../../../../assets/images/png/shoppinglogo.png'} />
+                                <img src={shopping_logo} />
                             </div>
                             <div className={styles.attribute_product_foot_item}>
                                 <span>امکان تحویل اکسپرس</span>
-                                <img src={'./../../../../assets/images/png/shoppinglogo.png'} />
+                                <img src={delivery_logo} />
                             </div>
                             <div className={styles.attribute_product_foot_item}>
                                 <span>تضمین کیفیت و اصل بودن کالا</span>
-                                <img src={'./../../../../assets/images/png/shoppinglogo.png'} />
+                                <img src={quality_logo} />
                             </div>
                             <div className={styles.attribute_product_foot_item}>
                                 <span>هفت روز ضمانت بازگشت وجه</span>
-                                <img src={'./../../../../assets/images/png/shoppinglogo.png'} />
+                                <img src={guarantee_logo} />
                             </div>
                         </div>
                     </div>

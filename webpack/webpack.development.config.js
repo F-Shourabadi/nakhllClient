@@ -64,7 +64,18 @@ module.exports = [
                         import: true,
                         url: true
                     }
-                }
+                },
+                {
+                    test: /\.(png|jpg|gif)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: false,
+                            },
+                        },
+                    ],
+                },
             ],
         },
         plugins: [
@@ -130,7 +141,18 @@ module.exports = [
                         import: true,
                         url: true
                     }
-                }
+                },
+                {
+                    test: /\.(png|jpg|gif)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: false,
+                            },
+                        },
+                    ],
+                },
             ],
         },
     }
